@@ -1,0 +1,52 @@
+
+<div class="container">
+
+  <div class="row mb-2">
+    <h2>{{ name }}</h2>
+
+    <table class="table table-striped bg-light">
+      <thead>
+        <tr>
+          <th>Nombre Capitalizado</th>
+          <th>Descripción</th>
+          <th>Edad</th>
+          <th>Poder</th>
+          <th>Altura</th>
+        </tr>
+      </thead>
+      <tr>
+        <td>{{ capitalizedName }}</td>
+        <td>{{ getDescription() }}</td>
+        <td>{{ age }}</td>
+        <td>{{ power }}</td>
+        <td>{{ height }}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="row">
+
+    <div class="col-4">
+
+      <!-- ngIf es un condicional -->
+      <button
+      *ngIf="name === 'Spiderman'"
+      (click)="changeName()">Cambiar nombre</button>
+
+    </div>
+
+    <div class="col-4">
+      <button
+      *ngIf="age === 25"
+      (click)="changeAge()">Cambiar edad</button>
+    </div>
+
+    <div class="col-4">
+      <button
+      *ngIf="age"
+      (click)="reset()">Resetear</button>
+    </div>
+
+  </div>
+
+</div>

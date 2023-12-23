@@ -1,0 +1,30 @@
+<h1>DBZ personajes</h1>
+
+<div class="row">
+
+  <div class="col">
+
+    <!-- Componente List -->
+
+    <!-- characterList obtenemos los datos de chracters para mostrar los personajes -->
+
+    <!-- onDeleteId enviamos el id a deleteCharacter para eliminar el personaje -->
+
+    <dbz-list
+    [charactersList]="characters"
+    (onDeleteId)="onDeleteCharacter($event)">
+    </dbz-list>
+
+  </div>
+
+  <div class="col">
+
+    <!-- Componente Add-character -->
+
+    <!-- Con onNewCharacter eviamos datos del coponente addCharacter a getNewCharacter metodo del componente MainComponent -->
+
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
+
+  </div>
+
+</div>
